@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { User, Transaction, Category, Account, Budget, UserType } from '../types';
+import { User, Transaction, Category, Account, Budget } from '../types';
 
 interface AppState {
   // User

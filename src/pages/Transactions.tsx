@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useAppStore } from '../store';
 import { formatCurrency, formatDate, getTransactionIcon, getTransactionColor } from '../utils';
-import { Transaction, TransactionType } from '../types';
+import { TransactionType } from '../types';
 import { Plus, Search, Filter, Edit, Trash2 } from 'lucide-react';
 
 export default function Transactions() {
@@ -9,7 +9,7 @@ export default function Transactions() {
   const [showAddModal, setShowAddModal] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterType, setFilterType] = useState<TransactionType | 'all'>('all');
-  const [editingTransaction, setEditingTransaction] = useState<Transaction | null>(null);
+  // const [editingTransaction, setEditingTransaction] = useState<Transaction | null>(null);
 
   // Form state
   const [formData, setFormData] = useState({
@@ -185,7 +185,7 @@ export default function Transactions() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     <div className="flex items-center space-x-2">
                       <button
-                        onClick={() => setEditingTransaction(transaction)}
+                        onClick={() => {/* setEditingTransaction(transaction) */}}
                         className="text-primary-600 hover:text-primary-900"
                       >
                         <Edit className="h-4 w-4" />
